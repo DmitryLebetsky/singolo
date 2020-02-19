@@ -142,7 +142,7 @@ nav ul li span {
     font-family: Lato-Light;
     font-size: 18px;
     color: #767e9e;
-    line-height: 30px;
+    line-height: 31px;
     margin-left: 40px;
     margin-top: 113px;
 }
@@ -183,7 +183,7 @@ nav ul li span {
 }
 
 .item_description {
-    display: inline-block;
+    display: block;
     font-family: Lato-Regular;
     font-size: 12px;
     color: #767e9e;
@@ -195,7 +195,7 @@ nav ul li span {
 
 .pencil-description {
     margin-right: 1px;
-    margin-top: -36.5px;
+    margin-top: -35.5px;
 }
 
 #description-pencil__first-child {
@@ -212,7 +212,7 @@ nav ul li span {
 
 .bulb-description {
     margin-right: 0px;
-    margin-top: -36.5px;
+    margin-top: -35.5px;
 }
 
 #description-bulb__second-child {
@@ -228,6 +228,7 @@ nav ul li span {
 }
 
 .heart-description {
+    margin-top: -35.5px;
     margin-right: 2px;
 }
 
@@ -241,7 +242,7 @@ nav ul li span {
 
 .phone-description {
     margin-right: -1px;
-    margin-top: -37.5px;
+    margin-top: -35.5px;
 }
 
 #description-phone__first-child {
@@ -254,7 +255,7 @@ nav ul li span {
 
 .bubble-description {
     margin-right: 2px;
-    margin-top: -37.5px;
+    margin-top: -35.5px;
 }
 
 #description-bubble__first-child {
@@ -272,7 +273,7 @@ nav ul li span {
 
 .star-description {
     margin-right: 3px;
-    margin-top: -37.5px;
+    margin-top: -35.5px;
 }
 
 #description-star__first-child {
@@ -285,4 +286,10 @@ nav ul li span {
 
 .star-title {
     margin: -4.5px 0px 0px 17px;
+}
+
+img[alt="star-image"],
+img[alt="bubble-image"],
+img[alt="phone-image"] {
+    margin-top: -2px;
 }
