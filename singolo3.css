@@ -243,13 +243,50 @@ footer {
     padding: 22px 32px 0px 0px;
 }
 
-.footer-flex img {
+.footer-flex span {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
     margin-right: 8px;
-    transition: 1s;
 }
 
-.footer-flex img:hover {
-    transform: rotate(1turn);
+.footer__facebook {
+    background-image: url(assets/images/Facebook.png);
+    transition: all 0.5s;
+}
+
+.footer__facebook:hover {
+    background-image: url(assets/images/Facebook-footer-hover.png);
+    cursor: pointer;
+}
+
+.footer__google {
+    background-image: url(assets/images/Google.png);
+    transition: all 0.5s;
+}
+
+.footer__google:hover {
+    background-image: url(assets/images/Google-footer-hover.png);
+    cursor: pointer;
+}
+
+.footer__twitter {
+    background-image: url(assets/images/Twitter.png);
+    transition: all 0.5s;
+}
+
+.footer__twitter:hover {
+    background-image: url(assets/images/Twitter-footer-hover.png);
+    cursor: pointer;
+}
+
+.footer__linkedin {
+    background-image: url(assets/images/LinkedIn.png);
+    transition: all 0.5s;
+}
+
+.footer__linkedin:hover {
+    background-image: url(assets/images/LinkedIn-footer-hover.png);
     cursor: pointer;
 }
 
