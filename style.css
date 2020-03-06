@@ -214,6 +214,14 @@ nav ul li a {
     float: right;
     margin-right: 2px;
     margin-top: -36.5px;
+    max-width: 220px;
+}
+
+.item_description p {
+    text-overflow: clip;
+    max-width: 220px;
+    white-space: pre;
+    overflow: hidden;
 }
 
 .pencil-description {
@@ -461,6 +469,10 @@ img[alt="phone-image"] {
     font-weight: 900;
     margin: 3px 0px 0px -1px;
     padding: 3px 0px 0px 0px;
+    max-width: 100%;
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .AboutUs h4 {
