@@ -233,8 +233,14 @@ footer {
     background-color: #2d303a;
 }
 
-.copyright-img {
-    padding: 33px 0px 0px 42px;
+.footer__copyright-text {
+    padding: 27px 0px 0px 42px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #666d89;
+    font-family: Lato-Regular;
+    font-weight: 400;
+    display: inline-block;
 }
 
 .footer-flex {
