@@ -8,25 +8,34 @@
 </head>
 <body>
     <!-- singolo1 -->
-    <header>
+    <header id="header">
         <h1 id="logo">SINGOLO</h1>
         <span id="logo2">*</span>
         <nav id="navigation">
             <ul>
-                <li><a id="home" href="">HOME</a></li>
-                <li><a class="white-li" href="">SERVICES</a></li>
-                <li><a class="white-li" href="">PORTFOLIO</a></li>
-                <li><a class="white-li" href="">ABOUT</a></li>
-                <li><a id="last-child-ul" class="white-li" href="">CONTACT</a></li>
+                <li><a class="white-li red-li">HOME</a></li>
+                <li><a class="white-li">SERVICES</a></li>
+                <li><a class="white-li">PORTFOLIO</a></li>
+                <li><a class="white-li">ABOUT</a></li>
+                <li><a id="last-child-ul" class="white-li">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <section id="SliderBlock">
+    <div class="SliderBlock-container">
         <img id="leftChev"src="assets/images/leftChev.png" alt="chev">
         <img id="rightChev" src="assets/images/rightChev.png" alt="chev">
-        <img id="HorizontalIphone" src="assets/images/HorizontalIphone.png" alt="Iphone">
-        <img id="VerticalIphone" src="assets/images/VerticalIphone.png" alt="Iphone">
-    </section>
+        <div class="slider-container">
+            <section style="left: 0px;" id="SliderBlock">
+                <img id="ButtonOfVerticalIPhone" src="assets/images/Phone-Btn.png" alt="Phone-Btn-Horizontal">
+                <img id="HorizontalIphone" src="assets/images/HorizontalIphone.png" alt="Iphone">
+                <img id="ButtonOfHorizontalIPhone" src="assets/images/Phone-Btn.png" alt="Phone-Btn-Vertical">
+                <img id="VerticalIphone" src="assets/images/VerticalIphone.png" alt="Iphone">
+            </section>
+            <div style="left: 0px;" id="slider-image" class="slider-image">
+                <img src="assets/images/Slider.png" alt="slider">
+            </div>
+        </div>
+    </div>
     <section id="ServicesBlock">
         <h1>Our Services</h1>
         <p class="ServicesBlock_text"> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor</br>
@@ -89,33 +98,33 @@
         </div>
     </section>
     <!-- singolo2 -->
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="wrapper">
             <h1>Portfolio</h1>
             <h3>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h3>
             <ul class="portfolio__navigation">
-                <li class="navigation__link">All</li>
+                <li class="navigation__link navigation__link_selected">All</li>
                 <li class="navigation__link">Web Design</li>
                 <li class="navigation__link">Graphic Design</li>
                 <li class="navigation__link">Artwork</li>
             </ul>
             <div class="container-flex">
-                <img src="assets/images/1.png" alt="picture" class="flex-item">
-                <img src="assets/images/2.png" alt="picture" class="flex-item">
-                <img src="assets/images/3.png" alt="picture" class="flex-item">
-                <img src="assets/images/4.png" alt="picture" class="flex-item">
-                <img src="assets/images/5.png" alt="picture" class="flex-item">
-                <img src="assets/images/6.png" alt="picture" class="flex-item">
-                <img src="assets/images/7.png" alt="picture" class="flex-item">
-                <img src="assets/images/8.png" alt="picture" class="flex-item">
-                <img src="assets/images/9.png" alt="picture" class="flex-item">
-                <img src="assets/images/10.png" alt="picture" class="flex-item">
-                <img src="assets/images/11.png" alt="picture" class="flex-item">
-                <img src="assets/images/12.png" alt="picture" class="flex-item">
+                <img src="assets/images/1.png" alt="picture" class="flex-item" style="order: 0; opacity: 1;">
+                <img src="assets/images/2.png" alt="picture" class="flex-item" style="order: 1; opacity: 1;">
+                <img src="assets/images/3.png" alt="picture" class="flex-item" style="order: 2; opacity: 1;">
+                <img src="assets/images/4.png" alt="picture" class="flex-item" style="order: 3; opacity: 1;">
+                <img src="assets/images/5.png" alt="picture" class="flex-item" style="order: 4; opacity: 1;">
+                <img src="assets/images/6.png" alt="picture" class="flex-item" style="order: 5; opacity: 1;">
+                <img src="assets/images/7.png" alt="picture" class="flex-item" style="order: 6; opacity: 1;">
+                <img src="assets/images/8.png" alt="picture" class="flex-item" style="order: 7; opacity: 1;">
+                <img src="assets/images/9.png" alt="picture" class="flex-item" style="order: 8; opacity: 1;">
+                <img src="assets/images/10.png" alt="picture" class="flex-item" style="order: 9; opacity: 1;">
+                <img src="assets/images/11.png" alt="picture" class="flex-item" style="order: 10; opacity: 1;">
+                <img src="assets/images/12.png" alt="picture" class="flex-item" style="order: 11; opacity: 1;">
             </div>
         </div>
     </section>
-    <section class="AboutUs">
+    <section id="AboutUs" class="AboutUs">
         <div class="wrapper">
             <h1>About Us</h1>
             <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor <span>ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></h3>
@@ -157,15 +166,15 @@
         </div>
     </section>
     <!-- singolo3 -->
-    <section class="get-a-quote">
+    <section id="GetAQuote" class="get-a-quote">
         <p class="quote__title">Get a Quote</p>
         <p class="quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor <span>ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
         <div class="container-form">
             <form action="#" class="form">
                 <input autocomplete="off" type="text" name="name" placeholder="Name (Required)" required>
                 <input autocomplete="off" type="email" name="email" placeholder="Email (Required)" required>
-                <input autocomplete="off" type="text" name="question" placeholder="Subject">
-                <textarea autocomplete="off" name="description" placeholder="Describe your project in detail..."></textarea>
+                <input id="SubjectInput" maxlength="100" autocomplete="off" type="text" name="question" placeholder="Subject">
+                <textarea id="textArea" maxlength="100" autocomplete="off" name="description" placeholder="Describe your project in detail..."></textarea>
                 <button class="form__button" type="submit">Submit</button>
             </form>
             <div class="contact-info">
@@ -192,6 +201,9 @@
             <span class="footer__linkedin"></span>
         </div>
     </footer>
-    <script> </script>    
+    <div class="modal-window" style="display: none;">
+        <div class="modal-message"></div>
+    </div>
+    <script src="script.js"> </script>    
 </body>
 </html>
