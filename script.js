@@ -8,15 +8,16 @@ window.onload = function() {
                 a.classList.remove('red-li');
             });
             e.target.classList.add('red-li');
-            let heightOfHeader = document.getElementById('header').offsetHeight;
-            let target = e.target.innerText;
-            let indexOfTarget = headerNavigationliList.indexOf(target);
-            let idOfDesiredSection = sectionsIdList[indexOfTarget];
-            let scrollTop = document.getElementById(`${idOfDesiredSection}`).offsetTop - heightOfHeader;
-            window.scrollTo({
-                top: scrollTop,
-                behavior: "smooth"
-            });
+            //                           Scroll without anchors
+            // let heightOfHeader = document.getElementById('header').offsetHeight;
+            // let target = e.target.innerText;
+            // let indexOfTarget = headerNavigationliList.indexOf(target);
+            // let idOfDesiredSection = sectionsIdList[indexOfTarget];
+            // let scrollTop = document.getElementById(`${idOfDesiredSection}`).offsetTop - heightOfHeader;
+            // window.scrollTo({
+            //     top: scrollTop,
+            //     behavior: "smooth"
+            // });
         }
     });
     //   Slider
