@@ -196,6 +196,12 @@ window.onload = function() {
     document.addEventListener('scroll', e => {
         const currentScrollY = window.scrollY + document.querySelector('header').offsetHeight;
         sections.forEach( (section) => {
+            if (+window.innerHeight + +window.scrollY == document.body.offsetHeight) {
+                document.querySelectorAll('#navigation a').forEach((a) => {
+                    a.classList.remove('red-li');
+                })
+                document.getElementById('last-child-ul').classList.add('red-li');
+            }
             if (section.offsetTop <= currentScrollY && (section.offsetTop + section.offsetHeight) > currentScrollY) {
                 document.querySelectorAll('#navigation a').forEach ( (a) => {
                     a.classList.remove('red-li');
