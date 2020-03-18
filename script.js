@@ -1,25 +1,26 @@
 window.onload = function() {
+    window.scrollTo(0, 0);
     //   Header navigation
     const sectionsIdList = ['SliderBlock', 'ServicesBlock', 'portfolio', 'AboutUs', 'GetAQuote'];
     const headerNavigationliList = ['HOME', 'SERVICES', 'PORTFOLIO', 'ABOUT', 'CONTACT'];
-    document.querySelector('#navigation ul').addEventListener('click', (e) => {
-        if (e.target.tagName == 'A') {
-            document.querySelectorAll('#navigation a').forEach(a => {
-                a.classList.remove('red-li');
-            });
-            e.target.classList.add('red-li');
-            //                           Scroll without anchors
-            // let heightOfHeader = document.getElementById('header').offsetHeight;
-            // let target = e.target.innerText;
-            // let indexOfTarget = headerNavigationliList.indexOf(target);
-            // let idOfDesiredSection = sectionsIdList[indexOfTarget];
-            // let scrollTop = document.getElementById(`${idOfDesiredSection}`).offsetTop - heightOfHeader;
-            // window.scrollTo({
-            //     top: scrollTop,
-            //     behavior: "smooth"
-            // });
-        }
-    });
+    // document.querySelector('#navigation ul').addEventListener('click', (e) => {
+    //     if (e.target.tagName == 'A') {
+    //         document.querySelectorAll('#navigation a').forEach(a => {
+    //             a.classList.remove('red-li');
+    //         });
+    //         e.target.classList.add('red-li');
+    //         //                           Scroll without anchors
+    //         // let heightOfHeader = document.getElementById('header').offsetHeight;
+    //         // let target = e.target.innerText;
+    //         // let indexOfTarget = headerNavigationliList.indexOf(target);
+    //         // let idOfDesiredSection = sectionsIdList[indexOfTarget];
+    //         // let scrollTop = document.getElementById(`${idOfDesiredSection}`).offsetTop - heightOfHeader;
+    //         // window.scrollTo({
+    //         //     top: scrollTop,
+    //         //     behavior: "smooth"
+    //         // });
+    //     }
+    // });
     //   Slider
     const SlidersIdList = ['SliderBlock', 'slider-image'];
     let indexOfActiveSlide = 0;
@@ -99,22 +100,60 @@ window.onload = function() {
     });
     // Tags sort
     let ListOfTags = document.querySelector('.portfolio__navigation');
+    let isCan = true;
     ListOfTags.addEventListener('click', (e) => {
-        if (e.target.tagName == 'LI') {
-            let allTags = ListOfTags.querySelectorAll('li');
-            allTags.forEach((tag) => {
-                tag.classList.remove('navigation__link_selected');
-            });
-            e.target.classList.add('navigation__link_selected');
-            let imgArr = document.querySelectorAll('.flex-item');
-            imgArr.forEach((img) => {
-                if(+img.style.order !== 11) {
-                    img.style.order = +img.style.order + 1 + '';
-                } else {
-                    img.style.order = '0';
+        if(isCan) {
+            isCan = false;
+            if (e.target.tagName == 'LI') {
+                let allTags = ListOfTags.querySelectorAll('li');
+                allTags.forEach((tag) => {
+                    tag.classList.remove('navigation__link_selected');
+                });
+                e.target.classList.add('navigation__link_selected');
+    
+                //sort
+                let RemoveOpacity = setInterval(() =>{
+                    document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity - 0.1 + '';
+                    if (+document.querySelector('.container-flex').style.opacity == 0) {
+                        clearInterval(RemoveOpacity);
+                    }
+                }, 50);
+                setTimeout (Shuddle, 500);
+                function Shuddle() {
+                    function CheckRepetition(arr) {
+                        for (let i = 0; i < arr.length; i++) {
+                            if (arr[i].getAttribute('src') == arrOfImages[i].getAttribute('src')) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                    let arrOfImages = Array.from(document.querySelectorAll('.flex-item'));
+                    let shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
+                        return this.Math.random()- 0.5;
+                    });
+                    let resultOfCheck = CheckRepetition(shuffledArrOfImages);
+                    while(resultOfCheck) {
+                        shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
+                            return Math.random()- 0.5;
+                        });
+                        resultOfCheck = CheckRepetition(shuffledArrOfImages);
+                    }
+                    document.querySelector('.container-flex').innerHTML = "";
+                    shuffledArrOfImages.forEach(el => {
+                        document.querySelector('.container-flex').appendChild(el);
+                    });
+                    let AddOpacity = setInterval(() => {
+                        document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity + 0.1 + '';
+                    if (+document.querySelector('.container-flex').style.opacity == 1) {
+                        clearInterval(AddOpacity);
+                        isCan = true;
+                    }
+                    }, 50);
                 }
-            });
+            }
         }
+        
     });
     // Click img portfolio
     document.querySelector('.container-flex').addEventListener('click', (e) => {
@@ -147,7 +186,24 @@ window.onload = function() {
             document.querySelector('.modal-message').innerHTML += '<button>Ок</button>';
             document.querySelector('.modal-message').querySelector('button').addEventListener('click', () => {
                 document.querySelector('.modal-window').style.display = 'none';
+                document.querySelector('form').reset();
             });
         }
+    });
+    //Onscroll 
+    let sections = document.querySelectorAll('section');
+        
+    document.addEventListener('scroll', e => {
+        const currentScrollY = window.scrollY + document.querySelector('header').offsetHeight;
+        sections.forEach( (section) => {
+            if (section.offsetTop <= currentScrollY && (section.offsetTop + section.offsetHeight) > currentScrollY) {
+                document.querySelectorAll('#navigation a').forEach ( (a) => {
+                    a.classList.remove('red-li');
+                    if (a.getAttribute('href').slice(1) == section.getAttribute('id')) {
+                        a.classList.add('red-li');
+                    }
+                });
+            }
+        });
     });
 };
