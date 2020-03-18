@@ -146,8 +146,8 @@ window.onload = function() {
                     let AddOpacity = setInterval(() => {
                         document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity + 0.1 + '';
                     if (+document.querySelector('.container-flex').style.opacity == 1) {
-                        clearInterval(AddOpacity);
                         isCan = true;
+                        clearInterval(AddOpacity);
                     }
                     }, 50);
                 }
