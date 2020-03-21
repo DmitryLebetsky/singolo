@@ -103,8 +103,8 @@ window.onload = function() {
     let isCan = true;
     ListOfTags.addEventListener('click', (e) => {
         if(isCan) {
-            isCan = false;
             if (e.target.tagName == 'LI') {
+                isCan = false;
                 let allTags = ListOfTags.querySelectorAll('li');
                 allTags.forEach((tag) => {
                     tag.classList.remove('navigation__link_selected');

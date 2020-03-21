@@ -182,12 +182,14 @@ img[alt="Phone-Btn-Horizontal"] {
     position: absolute;
     top: 555px;
     left: 198px;
+    cursor: pointer;
 }
 
 img[alt="Phone-Btn-Vertical"] {
     position: absolute;
     right: 544px;
     top: 355px;
+    cursor: pointer;
 }
 
 #ServicesBlock {
