@@ -925,10 +925,11 @@ footer {
 
 .modal-message p {
     padding-left: 20px;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     white-space: pre;
     max-width: 100%;
     overflow: hidden;
+    max-height: 100px;
 }
 
 .title-model-message {
