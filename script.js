@@ -176,12 +176,26 @@ window.onload = function() {
             if (document.getElementById('SubjectInput').value == '') {
                 document.querySelector('.modal-message').innerHTML += '<p>Без темы</p>';
             } else {
-                document.querySelector('.modal-message').innerHTML += `<p>Тема: ${document.getElementById('SubjectInput').value}</p>`;
+                let topic = document.getElementById('SubjectInput').value;
+                while (topic.includes('<')) {
+                    topic = topic.replace('<', '&lt;');
+                }
+                while (topic.includes('>')) {
+                    topic = topic.replace('>', '&gt;');
+                }
+                document.querySelector('.modal-message').innerHTML += `<p>Тема: ${topic}</p>`;
             }
             if (document.getElementById('textArea').value == '') {
                 document.querySelector('.modal-message').innerHTML += '<p>Без описания</p>';
             } else {
-                document.querySelector('.modal-message').innerHTML += `<p>Описание: ${document.getElementById('textArea').value}</p>`;
+                let descr = document.getElementById('textArea').value;
+                while (descr.includes('<')) {
+                    descr = descr.replace('<', '&lt;');
+                }
+                while (descr.includes('>')) {
+                    descr = descr.replace('>', '&gt;');
+                }
+                document.querySelector('.modal-message').innerHTML += `<p>Описание: ${descr}</p>`;
             }
             document.querySelector('.modal-message').innerHTML += '<button>Ок</button>';
             document.querySelector('.modal-message').querySelector('button').addEventListener('click', () => {

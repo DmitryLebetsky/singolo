@@ -920,10 +920,15 @@ footer {
     width: 700px;
     opacity: 1;
     position: relative;
+    overflow: hidden;
 }
 
 .modal-message p {
     padding-left: 20px;
+    text-overflow: clip;
+    white-space: pre;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .title-model-message {
