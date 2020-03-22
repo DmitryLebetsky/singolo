@@ -28,24 +28,25 @@ window.onload = function() {
     document.getElementById('leftChev').addEventListener('click', (e) => {
         if (isEnabled) {
             isEnabled = false;
+            let width = document.getElementById('SliderBlock').offsetWidth;
             if (indexOfActiveSlide == 0) {
-                document.getElementById('slider-image').style.left = "-2040px";
+                document.getElementById('slider-image').style.left = `-${2*width}px`;
                 indexOfActiveSlide = 1;
             } else {
-                document.getElementById('SliderBlock').style.left = "-1020px";
+                document.getElementById('SliderBlock').style.left = `-${width}px`;
                 indexOfActiveSlide = 0;
             }
             const slider = setInterval(() => {
                 if (indexOfActiveSlide == 1) {
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + 10 + 'px';
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + 10 + 'px';
-                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == '1020px') {
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + width/100 + 'px';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + width/100 + 'px';
+                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `${width}px`) {
                         isEnabled = true;
                         clearInterval(slider);
                     }
                 } else {
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + 10 + 'px';
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + 10 + 'px';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + width/100 + 'px';
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + width/100 + 'px';
                     if (document.getElementById('SliderBlock').style.left == '0px') {
                         isEnabled = true;
                         clearInterval(slider);
@@ -57,24 +58,25 @@ window.onload = function() {
     document.getElementById('rightChev').addEventListener('click', (e) => {
         if (isEnabled) {
             isEnabled = false;
+            let width = document.getElementById('SliderBlock').offsetWidth;
             if (indexOfActiveSlide == 0) {
                 document.getElementById('slider-image').style.left = "0px";
                 indexOfActiveSlide = 1;
             } else {
-                document.getElementById('SliderBlock').style.left = "1020px";
+                document.getElementById('SliderBlock').style.left = `${width}px`;
                 indexOfActiveSlide = 0;
             }
             const slider = setInterval(() => {
                 if (indexOfActiveSlide == 1) {
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - 10 + 'px';
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - 10 + 'px';
-                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == '-1020px') {
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - width/100 + 'px';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - width/100 + 'px';
+                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `-${width}px`) {
                         isEnabled = true;
                         clearInterval(slider);
                     }
                 } else {
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - 10 + 'px';
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - 10 + 'px';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - width/100 + 'px';
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - width/100 + 'px';
                     if (document.getElementById('SliderBlock').style.left == '0px') {
                         isEnabled = true;
                         clearInterval(slider);
@@ -226,4 +228,100 @@ window.onload = function() {
             }
         });
     });
+    //Humburger Menu 
+    let menuStatus = false;
+    let IsMenuEnabled = true;
+    document.querySelector('.menu-btn').addEventListener('click', e => {
+        if (IsMenuEnabled) {
+            if (!menuStatus) {
+                document.getElementById('navigation').style.boxShadow = '0px 0px 0px 100vw rgba(45, 48, 58, 0.6)';
+                IsMenuEnabled = false;
+                menuStatus = true;
+                let leftPos = +window.getComputedStyle(document.getElementById('navigation')).left.replace('px', '');
+                let deg = 0;
+                const showMenu = setInterval(() => {
+                deg += 90/55;
+                document.querySelector('.menu-btn').style.transform = `rotate(${Math.floor(deg)}deg)`
+                leftPos += 5;
+                document.getElementById('navigation').style.left = `${leftPos}px`;
+                if(leftPos == -3) {
+                    document.getElementById('navigation').style.left = `0px`;
+                    IsMenuEnabled = true;
+                    clearInterval(showMenu);
+                }
+            }, 5)
+            } else if (menuStatus) {
+                document.getElementById('navigation').style.boxShadow = 'none';
+                IsMenuEnabled = false;
+                menuStatus = false;
+                let leftPos = +window.getComputedStyle(document.getElementById('navigation')).left.replace('px', '');
+                let deg = 90;
+                const showMenu = setInterval(() => {
+                deg -= 90/55;
+                document.querySelector('.menu-btn').style.transform = `rotate(${Math.floor(deg)}deg)`
+                leftPos -= 5;
+                document.getElementById('navigation').style.left = `${leftPos}px`;
+                if(leftPos == -275) {
+                    document.getElementById('navigation').style.left = `-278px`;
+                    IsMenuEnabled = true;
+                    clearInterval(showMenu);
+                }
+            }, 5)
+            }
+        }
+    })
+    // Close humburger menu onclick 
+    document.getElementById('navigation').addEventListener('click', e => {
+        if (window.innerWidth <= 767) {
+            if (e.target.tagName == 'A') {
+                if (IsMenuEnabled) {
+                    if (menuStatus) {
+                        document.getElementById('navigation').style.boxShadow = 'none';
+                        IsMenuEnabled = false;
+                        menuStatus = false;
+                        let leftPos = +window.getComputedStyle(document.getElementById('navigation')).left.replace('px', '');
+                        let deg = 90;
+                        const showMenu = setInterval(() => {
+                        deg -= 90/55;
+                        document.querySelector('.menu-btn').style.transform = `rotate(${Math.floor(deg)}deg)`
+                        leftPos -= 5;
+                        document.getElementById('navigation').style.left = `${leftPos}px`;
+                        if(leftPos == -275) {
+                            document.getElementById('navigation').style.left = `-278px`;
+                            IsMenuEnabled = true;
+                            clearInterval(showMenu);
+                        }
+                    }, 5)
+                    }
+                }
+            }  
+        }
+    })
+    // TEST
+    document.body.addEventListener('click', e => {
+        if (window.innerWidth <= 767) {
+            if (!(e.target.classList.contains('nav-item'))) {
+                if (IsMenuEnabled) {
+                    if (menuStatus) {
+                        document.getElementById('navigation').style.boxShadow = 'none';
+                        IsMenuEnabled = false;
+                        menuStatus = false;
+                        let leftPos = +window.getComputedStyle(document.getElementById('navigation')).left.replace('px', '');
+                        let deg = 90;
+                        const showMenu = setInterval(() => {
+                        deg -= 90/55;
+                        document.querySelector('.menu-btn').style.transform = `rotate(${Math.floor(deg)}deg)`
+                        leftPos -= 5;
+                        document.getElementById('navigation').style.left = `${leftPos}px`;
+                        if(leftPos == -275) {
+                            document.getElementById('navigation').style.left = `-278px`;
+                            IsMenuEnabled = true;
+                            clearInterval(showMenu);
+                        }
+                    }, 5)
+                    }
+                }
+            }
+        }
+    })
 };

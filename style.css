@@ -32,7 +32,7 @@ html{
 body {
     width: 1020px;
     padding: 0px;
-    margin: 0px;
+    margin: 0 auto;
 }
 
 header {
@@ -44,7 +44,59 @@ header {
     z-index: 2;
 }
 
-#logo {
+.menu-btn {
+    z-index: 1;
+    display: none;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+}
+
+.menu-btn span {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 1.2px);
+    width: 100%;
+    height: 2.4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.menu-btn span::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -8.8px;
+    left: 0;
+    width: 100%;
+    height: 2.4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.menu-btn span::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 8.8px;
+    left: 0;
+    width: 100%;
+    height: 2.4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.logo-container-second {
+    display: none;
+}
+
+.logo {
     display: inline-block;
     padding: 0px;
     margin: 30px 0px 0px 40px;
@@ -53,13 +105,12 @@ header {
     font-size: 24px;
 }
 
-#logo2 {
+.logo2 {
     position: absolute;
     font-family: Lato-Bold;
     font-size: 24px;
     color: #f06c64;
-    margin-right: 1039px;
-    margin-top: 29px;
+    top: 29px;
     cursor: default;
 }
 
@@ -123,13 +174,14 @@ nav ul li a {
 .SliderBlock-container {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 
 .slider-container {
     display: flex;
     flex-direction: row;
-    width: 2040px;
+    width: 200%;
 }
 
 #SliderBlock {
@@ -139,6 +191,7 @@ nav ul li a {
     background: #f06c64;
     border-bottom: 6px solid #ea676b;
     position: relative;
+    width: 50%;
 }
 
 .slider-image{
@@ -147,18 +200,24 @@ nav ul li a {
     border-bottom: 6px solid #648BF0;
     padding: 0px;
     height: 594px;
+    width: 50%;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
 }
 
 #leftChev {
     position: absolute;
-    left: 42px;
+    left: 4.117647058823529%;
     top: 376px;
     z-index: 1;
 }
 
 #rightChev {
     position: absolute;
-    left: 964px;
+    left: 94.50980392156863%;
     top: 376px;
     z-index: 1;
 }
@@ -169,26 +228,36 @@ nav ul li a {
 }
 
 #HorizontalIphone {
-    margin-left: 425px;
+    margin-left: 379px;
     margin-top: 174px;
+    width: 47.45098039215686%;
+    height: auto;
 }
 
 #VerticalIphone {
     margin-left: 112px;
-    margin-top: -365px;
+    margin-top: 229px;
+    bottom: 100%;
+    width: 23.52941176470588%;
+    height: auto;
+    position: relative;
+    z-index: 0;
 }
 
 img[alt="Phone-Btn-Horizontal"] {
-    position: absolute;
-    top: 555px;
+    width: 4.117647058823529%;
+    position: relative;
+    top: 89px;
     left: 198px;
     cursor: pointer;
+    z-index: 1;
 }
 
 img[alt="Phone-Btn-Vertical"] {
-    position: absolute;
-    right: 544px;
-    top: 355px;
+    width: 4.117647058823529%;
+    position: relative;
+    left: -480px;
+    top: -112px;
     cursor: pointer;
 }
 
@@ -197,6 +266,8 @@ img[alt="Phone-Btn-Vertical"] {
     background: #f2f2f2;
     border-bottom: 6px solid white;
     scroll-margin-top: 95px;
+    width: 100%;
+    position: relative;
 }
 
 #ServicesBlock h1 {
@@ -217,9 +288,9 @@ img[alt="Phone-Btn-Vertical"] {
     line-height: 31px;
     margin-left: 40px;
     margin-top: 113px;
-}
-
-#ServicesBlock p span {
+    width: 92.15686274509804%;
+    white-space: pre-line;
+    text-align: justify;
     word-spacing: -1.1px;
 }
 
@@ -228,10 +299,10 @@ img[alt="Phone-Btn-Vertical"] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 940px;
-    margin-left: 40px;
-    margin-top: 219px;
-    position: absolute;
+    max-width: 92.15686274509804%;
+    left: 40px;
+    top: 219px;
+    position: relative;
 }
 
 .container__item {
@@ -381,14 +452,16 @@ img[alt="phone-image"] {
     height: 863px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
+    width: 100%;
 }
 
 .wrapper {
     padding-top: 68px;
     height: 814.95px;
-    max-width: 940px;
+    max-width: 92.15686274509804%;
     margin: 0 auto;
 }
+
 .AboutUs .wrapper {
     padding-top: 69px;
 }
@@ -464,16 +537,15 @@ img[alt="phone-image"] {
 
 .container-flex {
     padding-top: 19px;
-    width: 940px;
-    max-height: 625px;
+    width: 102.1276595744681%;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     /* overflow: hidden; */
 }
 
 .flex-item {
-    width: 220px;
     height: auto;
     margin-bottom: 20px;
     margin-right: 20px;
@@ -487,6 +559,7 @@ img[alt="phone-image"] {
     height: 728px; 
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
+    width: 100%
 }
 
 .AboutUs h1 {
@@ -504,7 +577,7 @@ img[alt="phone-image"] {
 .about-flex {
     display: flex;
     height: 443px;
-    width: 940px;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 44px 0px 0px 0px;
@@ -513,10 +586,15 @@ img[alt="phone-image"] {
 .about-flex__item {
     height: 443px;
     display: flex;
-    width: 300px;
+    width: 31.91489361702128%;
     flex-direction: column;
     align-content: space-between;
     justify-content: space-between;
+}
+
+.about-flex__item img {
+    width: 100%;
+    height: auto;
 }
 
 .AboutUs h2 {
@@ -627,6 +705,7 @@ img[alt="phone-image"] {
     scroll-margin-top: 95px;
     padding: 0px 0px 0px 0px;
     height: 648px;
+    width: 100%;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
 }
@@ -644,7 +723,7 @@ img[alt="phone-image"] {
 .quote__description {
     margin: 0px;
     padding: 27px 0px 0px 40px;
-    width: 940px;
+    width: 92.15686274509804%;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
@@ -665,7 +744,7 @@ img[alt="phone-image"] {
 textarea {
     padding: 0px;
     resize: none;
-    width: 604px;
+    width: 97.5767366720517%;
     height: 195.57px;
     border-radius: 5px;
     background-color: #d6564f;
@@ -682,13 +761,13 @@ textarea {
 }
 
 form {
-    width: 619px;
+    width: 60.68627450980392%;
     padding-left: 40px;
     padding-top: 47px;
 }
 
 form > input {
-    width: 604px;
+    width: 97.5767366720517%;
     height: 38px;
     border-radius: 5px;
     background-color: #d6564f;
@@ -740,7 +819,7 @@ textarea::placeholder {
 }
 
 .contact-info {
-    width: 300px;
+    width: 29.41176470588235%;
     padding-top: 29px;
     padding-left: 21px;
 }
@@ -754,7 +833,7 @@ textarea::placeholder {
 }
 
 .contact-info__description {
-    width: 300px;
+    width: 100%;
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
@@ -904,8 +983,10 @@ footer {
 
 .modal-window {
     position: fixed;
+    display: flex;
+    z-index: 2;
     top: 0;
-    left: 0;
+    left: auto;
     width: inherit;
     height: 100%;
     background-color: rgba(200, 200, 200, 0.5);;
@@ -940,3 +1021,406 @@ footer {
 .modal-message button {
     margin-left: 20px;
 }
+
+/*                                             MEDIA STYLES */
+
+/* 768px <= width < 1020px */
+
+@media only screen and (max-width: 1019px) {
+
+    body {
+        width: 100vw;
+    }
+
+    #VerticalIphone {
+        position: absolute;
+        top: calc(95px + 5.334635416666667vw);
+        left: 10.96223958333333vw;
+        margin-top: 0;
+        margin-left: 0;
+        width: 23.54817708333333vw;
+    }
+
+    #HorizontalIphone {
+        position: absolute;
+        top: calc(95px + 17.37369791666667vw);
+        left: 41.59635416666667vw;
+        margin-top: 0;
+        margin-left: 0;
+        width: 23,55859375vw;
+    }
+
+    img[alt="Phone-Btn-Horizontal"] {
+        width: 4.098958333333333%;
+        position: absolute;
+        top: calc(95px + 45.2421875vw);
+        left: 19.48307291666667vw;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    img[alt="Phone-Btn-Vertical"] {
+        width: 4.098958333333333%;
+        position: relative;
+        top: 25.89453125vw;
+        left: 42.41536458333333vw;
+        cursor: pointer;
+    }
+
+    #leftChev {
+        position: absolute;
+        left: 3.830729166666667vw;
+        top: calc(95px + 27.58854166666667vw);
+        z-index: 1;
+    }
+    
+    #rightChev {
+        position: absolute;
+        left: 94.41927083333333vw;
+        top: calc(95px + 27.58854166666667vw);
+        z-index: 1;
+    }
+
+    #SliderBlock {
+        height: 58.82291666666667vw;
+    }
+
+    .slider-image {
+        height: 58.82291666666667vw;
+    }
+
+    .ServicesBlock_text {
+        word-spacing: 0;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin: 0 auto;
+        padding-top: 248.24px;
+        padding-bottom: 64px;
+        padding-right: 30px;
+        justify-content: space-around;
+    }
+
+    #ServicesBlock {
+        height: auto;
+    }
+
+    .portfolio {
+        height: auto;
+    }
+
+    .container-flex {
+        padding-top: 28px;
+        position: static;
+        padding-bottom: 47px;
+    }
+
+    .flex-item {
+        width: 29.91007194244604%;
+    }
+
+    .portfolio h3 {
+    max-width: 90.49479166666667%;
+    }
+
+    .portfolio .wrapper {
+        height: auto;
+    }
+
+    .about-flex {
+        height: auto;
+        padding-bottom: 69px;
+    }
+
+    .about-flex__item {
+        height: 46.875vw;
+    }
+
+    .AboutUs {
+        height: auto;
+    }
+
+    .AboutUs h4 {
+        text-align: justify;
+    }
+
+    .AboutUs .wrapper {
+        height: auto
+    }
+
+    .quote__description {
+        width: 89.71354166666667%
+    }
+
+    form {
+        width: 57.55208333333333%;
+        margin-top: 2.473958333333333vw;
+    }
+
+    .contact-info {
+        padding-left: 29px;
+        padding-top: 50px;
+    }
+
+    .contact-info__description {
+        text-align: justify;
+    }
+
+    .container-form {
+        padding-bottom: 5.10546875vw;
+    }
+
+    .get-a-quote {
+        height: auto;
+    }
+
+    .quote__title {
+        padding-top: 7.291666666666667vw;
+    }
+}
+
+/* 375px <= width < 768px */
+
+@media only screen and (max-width: 767px) {
+
+    header {
+        border-bottom: none;
+        height: 71px;
+    }
+
+    nav {
+        position: fixed;
+        width: 278px;
+        height: 100%;
+        float: none;
+        background-color: #2D303A;
+        left: -278px;
+        top: 0;
+
+        /* box-shadow: 0px 0px 0px 100vw rgba(45, 48, 58, 0.6); */
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 232px 0px 0px 71px; 
+    }
+
+    nav ul li {
+        display: block;
+        padding-bottom: 27px;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+    }
+    
+    .white-li::before {
+        display: none;
+    }
+    
+    .red-li::before {
+        display: none;
+    }
+    
+    #last-child-ul {
+        margin-right: 0;
+    }
+
+    .logo-container {
+        text-align: center;
+        display: block;
+        padding-top: 24px;
+    }
+
+    .logo {
+        font-size: 19.6875px;
+        margin: 0;
+    }
+
+    .logo2 {
+        font-size: 19.6875px;
+        position: static;
+    }
+
+    .container {
+        width: 100vw;
+        padding-right: 0;
+    }
+
+    .logo-container-second {
+        display: inline-block;
+        padding-top: 24px;
+        padding-left: 71px;
+    }
+
+    .menu-btn {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        top: 26px;
+        left: 20px;
+    }
+
+    #SliderBlock {
+        scroll-margin-top: 70px;
+    }
+
+    .slider-image{
+        top: 75px;
+    }
+
+    .slider-container {
+        background-color: #648BF0;
+    }
+
+    #ServicesBlock {
+        scroll-margin-top: 70px;
+    }
+
+    .ServicesBlock_text {
+        width: 83.73333333333333vw;
+        margin-bottom: 0;
+    }
+
+    .container {
+        padding-top: 350px;
+    }
+
+    .container-flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        width: 47.93650793650794%;
+        margin-right: 0px;
+        margin-bottom: 14px;
+    }
+
+    .flex-item:nth-child(n+9) {
+        display: none;
+    }
+
+    .flex-item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .portfolio {
+        scroll-margin-top: 70px;
+    }
+
+    .portfolio .wrapper {
+        max-width: 84%;
+        margin: 0 0 0 8%;
+    }
+    
+    .AboutUs {
+        scroll-margin-top: 70px;
+    }
+
+    .AboutUs h3 {
+        width: 89.15110828172927%;
+    }
+
+    .about-flex {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .about-flex__item {
+        width: 89.15110828172927%;
+        height: auto;
+        margin-bottom: 34px;
+    }
+
+    .AboutUs .wrapper {
+        margin: 0 0 0 30px;
+    }
+
+    .AboutUs h2 {
+        padding-top: 18px;
+    }
+
+    .AboutUs h4 {
+        padding-top: 5px;
+    }
+
+    .get-a-quote {
+        scroll-margin-top: 70px;
+    }
+
+    .quote__description {
+        width: 81.73333333333333%;
+        padding-left: 30px;
+    }
+
+    .container-form {
+        flex-wrap: wrap;
+    }
+
+    form {
+        width: 84%;
+        padding-top: 160px;
+        padding-left: 30px;
+    }
+
+    .contact-info {
+        width: 84%;
+        padding-left: 30px;
+        padding-top: 12px;
+    }
+
+    .quote__title {
+        padding-left: 30px;
+    }
+
+    .adress div {
+        margin-bottom: 3.14px;
+    }
+
+    .form__button {
+        width: calc(100% + 6.5px);
+    }
+
+    .footer__copyright-text {
+        display: none;
+    }
+
+    .footer-flex {
+        display: flex;
+        float: none;
+        padding-right: 0;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+    /* width < 375 */
+    @media only screen and (max-width: 374px) {
+        .container {
+            padding-top: calc(725px + -100vw);
+        }
+    
+        .navigation__link {
+            margin-left: -1px;
+        }
+
+        .navigation__link:last-child {
+            margin-left: -1px;
+        }
+
+        .ServicesBlock_text {
+            margin-left: 20px;
+        }
+
+        #ServicesBlock h1 {
+            margin-left: 20px;
+        }
+
+        form {
+            padding-top: 180px;
+        }
+    }
