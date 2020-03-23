@@ -118,38 +118,41 @@ window.onload = function() {
                     document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity - 0.1 + '';
                     if (+document.querySelector('.container-flex').style.opacity == 0) {
                         clearInterval(RemoveOpacity);
-                        function CheckRepetition(arr) {
-                            for (let i = 0; i < arr.length; i++) {
-                                if (arr[i].getAttribute('src') == arrOfImages[i].getAttribute('src')) {
-                                    return true;
-                                }
-                            }
-                            return false;
-                        }
-                        let arrOfImages = Array.from(document.querySelectorAll('.flex-item'));
-                        let shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
-                            return this.Math.random()- 0.5;
-                        });
-                        let resultOfCheck = CheckRepetition(shuffledArrOfImages);
-                        while(resultOfCheck) {
-                            shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
-                                return Math.random()- 0.5;
-                            });
-                            resultOfCheck = CheckRepetition(shuffledArrOfImages);
-                        }
-                        document.querySelector('.container-flex').innerHTML = "";
-                        shuffledArrOfImages.forEach(el => {
-                            document.querySelector('.container-flex').appendChild(el);
-                        });
-                        let AddOpacity = setInterval(() => {
-                            document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity + 0.1 + '';
-                        if (+document.querySelector('.container-flex').style.opacity == 1) {
-                            isCan = true;
-                            clearInterval(AddOpacity);
-                        }
-                        }, 50);
                     }
-                }, 50);  
+                }, 50);
+                setTimeout (Shuddle, 500);
+                function Shuddle() {
+                    function CheckRepetition(arr) {
+                        for (let i = 0; i < arr.length; i++) {
+                            if (arr[i].getAttribute('src') == arrOfImages[i].getAttribute('src')) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                    let arrOfImages = Array.from(document.querySelectorAll('.flex-item'));
+                    let shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
+                        return this.Math.random()- 0.5;
+                    });
+                    let resultOfCheck = CheckRepetition(shuffledArrOfImages);
+                    while(resultOfCheck) {
+                        shuffledArrOfImages = Array.from(document.querySelectorAll('.flex-item')).sort(() =>{
+                            return Math.random()- 0.5;
+                        });
+                        resultOfCheck = CheckRepetition(shuffledArrOfImages);
+                    }
+                    document.querySelector('.container-flex').innerHTML = "";
+                    shuffledArrOfImages.forEach(el => {
+                        document.querySelector('.container-flex').appendChild(el);
+                    });
+                    let AddOpacity = setInterval(() => {
+                        document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity + 0.1 + '';
+                    if (+document.querySelector('.container-flex').style.opacity == 1) {
+                        isCan = true;
+                        clearInterval(AddOpacity);
+                    }
+                    }, 50);
+                }
             }
         }
         
