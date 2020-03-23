@@ -30,24 +30,24 @@ window.onload = function() {
             isEnabled = false;
             let width = document.getElementById('SliderBlock').offsetWidth;
             if (indexOfActiveSlide == 0) {
-                document.getElementById('slider-image').style.left = `-${2*width}px`;
+                document.getElementById('slider-image').style.left = `-100%`;
                 indexOfActiveSlide = 1;
             } else {
-                document.getElementById('SliderBlock').style.left = `-${width}px`;
+                document.getElementById('SliderBlock').style.left = `-50%`;
                 indexOfActiveSlide = 0;
             }
             const slider = setInterval(() => {
                 if (indexOfActiveSlide == 1) {
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + width/100 + 'px';
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + width/100 + 'px';
-                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `${width}px`) {
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('%', '') + 1 + '%';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('%', '') + 1 + '%';
+                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `50%`) {
                         isEnabled = true;
                         clearInterval(slider);
                     }
                 } else {
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') + width/100 + 'px';
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') + width/100 + 'px';
-                    if (document.getElementById('SliderBlock').style.left == '0px') {
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('%', '') + 1 + '%';
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('%', '') + 1 + '%';
+                    if (document.getElementById('SliderBlock').style.left == '0%') {
                         isEnabled = true;
                         clearInterval(slider);
                     }
@@ -60,24 +60,24 @@ window.onload = function() {
             isEnabled = false;
             let width = document.getElementById('SliderBlock').offsetWidth;
             if (indexOfActiveSlide == 0) {
-                document.getElementById('slider-image').style.left = "0px";
+                document.getElementById('slider-image').style.left = "0%";
                 indexOfActiveSlide = 1;
             } else {
-                document.getElementById('SliderBlock').style.left = `${width}px`;
+                document.getElementById('SliderBlock').style.left = `50%`;
                 indexOfActiveSlide = 0;
             }
             const slider = setInterval(() => {
                 if (indexOfActiveSlide == 1) {
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - width/100 + 'px';
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - width/100 + 'px';
-                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `-${width}px`) {
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('%', '') - 1 + '%';
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('%', '') - 1 + '%';
+                    if (document.getElementById(`${SlidersIdList[0]}`).style.left == `-50%`) {
                         isEnabled = true;
                         clearInterval(slider);
                     }
                 } else {
-                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('px', '') - width/100 + 'px';
-                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('px', '') - width/100 + 'px';
-                    if (document.getElementById('SliderBlock').style.left == '0px') {
+                    document.getElementById('slider-image').style.left = +document.getElementById('slider-image').style.left.replace('%', '') - 1 + '%';
+                    document.getElementById('SliderBlock').style.left = +document.getElementById('SliderBlock').style.left.replace('%', '') - 1 + '%';
+                    if (document.getElementById('SliderBlock').style.left == '0%') {
                         isEnabled = true;
                         clearInterval(slider);
                     }
