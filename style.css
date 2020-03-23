@@ -1295,12 +1295,14 @@ footer {
     .container-flex {
         width: 100%;
         justify-content: space-between;
+        height: 147.7333333333333vw;
+        align-content: space-between;
     }
 
     .flex-item {
         width: 47.93650793650794%;
         margin-right: 0px;
-        margin-bottom: 14px;
+        margin-bottom: 0px;
     }
 
     .flex-item:nth-child(n+9) {
