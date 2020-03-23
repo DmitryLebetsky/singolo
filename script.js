@@ -115,7 +115,7 @@ window.onload = function() {
     
                 //sort
                 let RemoveOpacity = setInterval(() =>{
-                    document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity - 0.1 + '';
+                    document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity*100 - 10 + '%';
                     if (+document.querySelector('.container-flex').style.opacity == 0) {
                         clearInterval(RemoveOpacity);
                     }
@@ -146,7 +146,7 @@ window.onload = function() {
                         document.querySelector('.container-flex').appendChild(el);
                     });
                     let AddOpacity = setInterval(() => {
-                        document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity + 0.1 + '';
+                        document.querySelector('.container-flex').style.opacity = +document.querySelector('.container-flex').style.opacity*100 + 10 + '%';
                     if (+document.querySelector('.container-flex').style.opacity == 1) {
                         isCan = true;
                         clearInterval(AddOpacity);
