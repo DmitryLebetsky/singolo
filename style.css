@@ -793,24 +793,26 @@ textarea::placeholder {
 }
 
 .form__button {
+    font-family: Lato-Bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
     border: none;
     outline: none;
     border-radius: 5px;
-    height: 30px;
-    width: 70px;
+    height: 38px;
+    width: 136px;
     margin: 0px;
     padding: 0 0 0 0;
-    background-color: #f06c64;
-    color: #f0d8d9;
-    border: 1px solid #f0d8d9;
+    background-color: #FBC65F;
+    color: #886A30;
     transition: border-color 0.5s, background-color 0.5s, color 0.5s;
 }
 
 .form__button:hover {
-    border-color: #f06c64;
-    background-color: #f0d8d9;
-    color: #f06c64;
+    background-color: #FBDF5F;
     cursor: pointer;
+    color: #A3761F;
 }
 
 .contact-info {
@@ -1140,6 +1142,7 @@ footer {
 
     .about-flex__item {
         height: 46.875vw;
+        width: 30.93465206640763%;
     }
 
     .AboutUs {
@@ -1161,6 +1164,14 @@ footer {
     form {
         width: 57.55208333333333%;
         margin-top: 2.473958333333333vw;
+    }
+
+    .form input {
+        width: calc(57.5208333333333vw - 15px);
+    }
+
+    .form textarea {
+        width: calc(57.5208333333333vw - 15px);
     }
 
     .contact-info {
@@ -1338,7 +1349,7 @@ footer {
     }
 
     .about-flex__item {
-        width: 89.15110828172927%;
+        width: 91.01449275362319%;
         height: auto;
         margin-bottom: 34px;
     }
@@ -1389,7 +1400,16 @@ footer {
     }
 
     .form__button {
-        width: calc(100% + 6.5px);
+        width: 84vw;
+        height: 50px;
+    }
+
+    .form input {
+        width: calc(84vw - 15px);
+    }
+
+    .form textarea {
+        width: calc(84vw - 15px);
     }
 
     .footer__copyright-text {
