@@ -1122,6 +1122,7 @@ footer {
 
     .flex-item {
         width: 29.91007194244604%;
+        height: auto;
     }
 
     .portfolio h3 {
@@ -1301,6 +1302,7 @@ footer {
 
     .flex-item {
         width: 47.93650793650794%;
+        height: auto;
         margin-right: 0px;
         margin-bottom: 3.733333333333333vw;
     }
