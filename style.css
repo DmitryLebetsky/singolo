@@ -1036,6 +1036,10 @@ footer {
         width: 100vw;
     }
 
+    nav ul {
+        margin-top: 37.5px;
+    }
+
     #VerticalIphone {
         position: absolute;
         top: calc(95px + 5.334635416666667vw);
@@ -1086,40 +1090,53 @@ footer {
     }
 
     #SliderBlock {
-        height: 58.82291666666667vw;
+        height: 57.954567vw;
+        border-bottom: 4.52px solid #ea676b;
     }
 
     .slider-image {
         height: 58.82291666666667vw;
     }
 
+    #ServicesBlock h1 {
+        margin-top: 42px;
+    }
+
     .ServicesBlock_text {
         word-spacing: 0;
+        margin-top: 96px;
+        width: 87.156863%;
     }
 
     .container {
-        width: 100%;
+        width: 88%;
         height: auto;
         position: static;
         margin: 0 auto;
-        padding-top: 248.24px;
-        padding-bottom: 64px;
-        padding-right: 30px;
+        padding-top: 223.24px;;
+        padding-bottom: 22px;
+        padding-right: 34px;
         justify-content: space-around;
+    }
+
+    .container__item {
+        margin-bottom: 54px;
     }
 
     #ServicesBlock {
         height: auto;
+        border-bottom: none;
     }
 
     .portfolio {
         height: auto;
+        border-bottom: 7.6px solid #323746;
     }
 
     .container-flex {
         padding-top: 28px;
         position: static;
-        padding-bottom: 47px;
+        padding-bottom: 45px;
     }
 
     .flex-item {
@@ -1128,29 +1145,37 @@ footer {
     }
 
     .portfolio h3 {
-    max-width: 90.49479166666667%;
+        max-width: 91.494792%;
+        word-spacing: 1.3px;
     }
 
     .portfolio .wrapper {
         height: auto;
+        margin: 0px;
+        margin-left: 40px;
+        padding-top: 69px;
     }
 
     .about-flex {
         height: auto;
-        padding-bottom: 69px;
+        padding-bottom: 73px;
+        padding-top: 39px;
     }
 
     .about-flex__item {
         height: 46.875vw;
-        width: 30.93465206640763%;
+        width: 31.9131258654617%;
     }
 
     .AboutUs {
         height: auto;
+        border-bottom: none;
     }
 
     .AboutUs h3 {
         text-align: justify;
+        width: 98%;
+        letter-spacing: -0.19px;
     }
 
     .AboutUs h3 span {
@@ -1162,33 +1187,47 @@ footer {
     }
 
     .AboutUs .wrapper {
-        height: auto
+        padding-top: 61px;
+        height: auto;
+        margin: 0;
+        margin-left: 41px;
+        max-width: 89.33072916666667%;
     }
 
     .quote__description {
-        width: 89.71354166666667%
+        width: 89.71354166666667%;
+        letter-spacing: 0.1px;
     }
 
     form {
         width: 57.55208333333333%;
-        margin-top: 2.473958333333333vw;
+        margin-top: 1.302083333333333vw;
     }
 
     .form input {
         width: calc(57.5208333333333vw - 15px);
+        margin-bottom: 13px;
     }
 
     .form textarea {
         width: calc(57.5208333333333vw - 15px);
+        height: 149.57px;
+        margin-bottom: 15px;
     }
 
     .contact-info {
         padding-left: 29px;
-        padding-top: 50px;
+        padding-top: 40px;
     }
 
     .contact-info__description {
         text-align: justify;
+        margin-top: -15px;
+    }
+
+    .adress {
+        padding-top: 10px;
+        padding-left: 2px;
     }
 
     .container-form {
@@ -1200,7 +1239,18 @@ footer {
     }
 
     .quote__title {
-        padding-top: 7.291666666666667vw;
+        padding-top: 8.072916666666667vw;
+        padding-left: 42px;
+    }
+
+    .footer__copyright-text {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .container {
+        width: 92%;
     }
 }
 
@@ -1259,6 +1309,7 @@ footer {
 
     .logo {
         font-size: 19.6875px;
+        padding: 1px 0px 0px 17px;
         margin: 0;
     }
 
@@ -1268,7 +1319,7 @@ footer {
     }
 
     .container {
-        width: 100vw;
+        width: 78vw;
         padding-right: 0;
     }
 
@@ -1289,6 +1340,34 @@ footer {
 
     #SliderBlock {
         scroll-margin-top: 70px;
+        height: 51.954567vw;
+        border-bottom: 2.21px solid #ea676b;
+    }
+
+    #VerticalIphone {
+        top: calc(95px + -1.165365vw);
+    }
+
+    img[alt="Phone-Btn-Horizontal"] {
+        top: calc(95px + 38.74218708333333vw);
+    }
+
+    #HorizontalIphone {
+        top: calc(95px + 10.8736975vw);
+    }
+
+    img[alt="Phone-Btn-Vertical"] {
+        top: 19.39453083333333vw;
+    }
+
+    #rightChev {
+        left: 93.419271vw;
+        top: calc(95px + 19.6vw);
+    }
+
+    #leftChev {
+        left: 2.630729vw;
+        top: calc(95px + 19.6vw);
     }
 
     .slider-image{
@@ -1303,16 +1382,33 @@ footer {
         scroll-margin-top: 70px;
     }
 
+    #ServicesBlock h1 {
+        margin-top: 27px;
+        margin-left: 32px;
+    }
+
     .ServicesBlock_text {
         width: 83.73333333333333vw;
         text-align: unset;
         margin-bottom: 0;
         word-spacing: 1px;
+        margin-top: 80px;
+        margin-left: 31px;
+        line-height: 30px;
     }
 
     .container {
-        padding-top: 350px;
+        padding-top: 319px;
         padding-bottom: 0px;
+        margin-left: 34px;
+    }
+
+    .container__item {
+        margin-bottom: 8vw;
+    }
+
+    .container__item:last-child  {
+        margin-bottom: 26px;
     }
 
     .container-flex {
@@ -1320,6 +1416,8 @@ footer {
         justify-content: space-between;
         height: auto;
         align-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 27px;
     }
 
     .flex-item {
@@ -1339,15 +1437,22 @@ footer {
 
     .portfolio {
         scroll-margin-top: 70px;
+        border-bottom: none;
     }
 
     .portfolio h3 {
-        letter-spacing: -0.6px;
+        letter-spacing: -0.37px;
+        max-width: 95.494792%;
+    }
+
+    .portfolio__navigation {
+        margin-top: 15px;
     }
 
     .portfolio .wrapper {
         max-width: 84%;
         margin: 0 0 0 8%;
+        padding-top: 51px;
     }
     
     .AboutUs {
@@ -1355,27 +1460,29 @@ footer {
     }
 
     .AboutUs h3 {
-        width: 89.15110828172927%;
+        width: 94.151108%;
         text-align: unset;
     }
 
     .about-flex {
         flex-wrap: wrap;
-        padding-bottom: 0;
+        padding-bottom: 8px;
+        padding-top: 22px;
     }
 
     .about-flex__item {
-        width: 91.01449275362319%;
+        width: 93.73693951877724%;
         height: auto;
         margin-bottom: 34px;
     }
 
     .AboutUs .wrapper {
         margin: 0 0 0 30px;
+        padding-top: 44px;
     }
 
     .AboutUs h2 {
-        padding-top: 18px;
+        padding-top: 14px;
     }
 
     .AboutUs h4 {
@@ -1393,26 +1500,28 @@ footer {
 
     .container-form {
         flex-wrap: wrap;
+        padding-bottom: 9.405469vw;
     }
 
     form {
         width: 84%;
-        padding-top: 160px;
+        padding-top: 171px;
         padding-left: 30px;
     }
 
     .contact-info {
         width: 84%;
         padding-left: 30px;
-        padding-top: 12px;
+        padding-top: 15px;
     }
 
     .quote__title {
         padding-left: 30px;
+        padding-top: 14.072917vw;
     }
 
     .adress div {
-        margin-bottom: 3.14px;
+        margin-bottom: 7.14px;
     }
 
     .form__button {
@@ -1426,6 +1535,7 @@ footer {
 
     .form textarea {
         width: calc(84vw - 15px);
+        margin-bottom: 10px;
     }
 
     .footer__copyright-text {
@@ -1438,14 +1548,61 @@ footer {
         padding-right: 0;
         margin: 0 auto;
         justify-content: center;
+        padding-left: 6px;
+    }
+
+    .pencil-description {
+        margin-right: -4px;
+    }
+
+    .bulb-description {
+        margin-right: -6px;
+    }
+
+    .heart-description {
+        margin-right: -4px;
+    }
+
+    .phone-description {
+        margin-right: -5px;
+    }
+
+    .bubble-description {
+        margin-right: -4px;
+    }
+
+    .star-description {
+        margin-right: -1px;
     }
 }
     /* width < 375 */
     @media only screen and (max-width: 374px) {
-        .container {
-            padding-top: calc(725px + -100vw);
+        .pencil-description {
+            margin-right: -1px;
         }
-    
+
+        .bulb-description {
+            margin-right: -3px;
+        }
+
+        .phone-description {
+            margin-right: -4px;
+        }
+
+        .heart-description {
+            margin-right: -2px;
+        }
+
+        .bubble-description {
+            margin-right: -2px;
+        }
+
+        .container {
+            width: 93vw;
+            margin-left: 19px;
+            padding-top: 331px;
+        }
+
         .navigation__link {
             margin-left: -1px;
         }
@@ -1454,15 +1611,7 @@ footer {
             margin-left: -1px;
         }
 
-        .ServicesBlock_text {
-            margin-left: 20px;
-        }
-
-        #ServicesBlock h1 {
-            margin-left: 20px;
-        }
-
         form {
-            padding-top: 180px;
+            padding-top: 196px;
         }
     }
