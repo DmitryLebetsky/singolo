@@ -120,7 +120,7 @@ nav {
 
 nav ul {
     margin-top: 39.5px;
-    margin-right: 39.5px;
+    margin-right: 40.5px;
 }
 
 nav ul li {
@@ -141,7 +141,7 @@ nav ul li a {
     content: '·';
     margin-right: 14px;
     margin-left: 10px;
-    color: #494e62;
+    color: white;
     text-decoration: none;
     font-size: 12px;
     transition: 0.4s;
@@ -151,15 +151,23 @@ nav ul li a {
     content: '·';
     margin-right: 14px;
     transition: 0.4s;
-    color: #f06c64;
+    color: white;
 }
 
 .white-li:hover::before {
     color: white;
 }
 
-.red-li:hover::before {
+.white-li:hover {
     color: #f06c64;
+}
+
+.red-li:hover::before {
+    color: white;
+}
+
+.home-li::before {
+    opacity: 0;
 }
 
 #last-child-ul {
@@ -185,7 +193,7 @@ nav ul li a {
 }
 
 #SliderBlock {
-    scroll-margin-top: 95px;
+    scroll-margin-top: 90px;
     padding-top: 95px;
     height: 594px;
     background: #f06c64;
@@ -210,15 +218,15 @@ nav ul li a {
 
 #leftChev {
     position: absolute;
-    left: 4.117647058823529%;
-    top: 376px;
+    left: 4.017647%;
+    top: 378px;
     z-index: 1;
 }
 
 #rightChev {
     position: absolute;
     left: 94.50980392156863%;
-    top: 376px;
+    top: 377px;
     z-index: 1;
 }
 
@@ -229,14 +237,14 @@ nav ul li a {
 
 #HorizontalIphone {
     margin-left: 379px;
-    margin-top: 174px;
+    margin-top: 177px;
     width: 47.45098039215686%;
     height: auto;
 }
 
 #VerticalIphone {
     margin-left: 112px;
-    margin-top: 229px;
+    margin-top: 227px;
     bottom: 100%;
     width: 23.52941176470588%;
     height: auto;
@@ -247,7 +255,7 @@ nav ul li a {
 img[alt="Phone-Btn-Horizontal"] {
     width: 4.117647058823529%;
     position: relative;
-    top: 89px;
+    top: 87px;
     left: 198px;
     cursor: pointer;
     z-index: 1;
@@ -257,7 +265,7 @@ img[alt="Phone-Btn-Vertical"] {
     width: 4.117647058823529%;
     position: relative;
     left: -480px;
-    top: -112px;
+    top: -111px;
     cursor: pointer;
 }
 
@@ -265,7 +273,7 @@ img[alt="Phone-Btn-Vertical"] {
     height: 494px;
     background: #f2f2f2;
     border-bottom: 6px solid white;
-    scroll-margin-top: 95px;
+    scroll-margin-top: 90px;
     width: 100%;
     position: relative;
 }
@@ -281,7 +289,6 @@ img[alt="Phone-Btn-Vertical"] {
 
 .ServicesBlock_text {
     position: absolute;
-    letter-spacing: -0.05px;
     font-family: Lato-Light;
     font-size: 18px;
     color: #767e9e;
@@ -290,8 +297,6 @@ img[alt="Phone-Btn-Vertical"] {
     margin-top: 113px;
     width: 92.15686274509804%;
     white-space: pre-line;
-    text-align: justify;
-    word-spacing: -1.1px;
 }
 
 .container {
@@ -330,7 +335,7 @@ img[alt="Phone-Btn-Vertical"] {
     font-family: Lato-Regular;
     font-size: 12px;
     color: #767e9e;
-    line-height: 21px;
+    line-height: 22px;
     float: right;
     margin-right: 2px;
     margin-top: -36.5px;
@@ -358,7 +363,7 @@ img[alt="Phone-Btn-Vertical"] {
 }
 
 .pencil-title {
-    margin: -3px 0px 0px 15px;
+    margin: -1px 0px 0px 15px;
 }
 
 .bulb-description {
@@ -366,8 +371,12 @@ img[alt="Phone-Btn-Vertical"] {
     margin-top: -35.5px;
 }
 
+.bulb-description p:first-child {
+    word-spacing: 8px;
+}
+
 #description-bulb__second-child {
-    word-spacing: 6px;
+    word-spacing: 2px;
 }
 
 #description-bulb__third-child {
@@ -375,7 +384,7 @@ img[alt="Phone-Btn-Vertical"] {
 } 
 
 .bulb-title {
-    margin: -3px 0px 0px 16px;
+    margin: -1px 0px 0px 16px;
 }
 
 .heart-description {
@@ -388,12 +397,16 @@ img[alt="Phone-Btn-Vertical"] {
 }
 
 .heart-title {
-    margin: -3px 0px 0px 16px;
+    margin: -1px 0px 0px 16px;
 }
 
 .phone-description {
     margin-right: -1px;
     margin-top: -35.5px;
+}
+
+.phone-description p:nth-child(2) {
+    word-spacing: 8px;
 }
 
 #description-phone__first-child {
@@ -414,11 +427,10 @@ img[alt="Phone-Btn-Vertical"] {
 }
 
 #description-bubble__second-child {
-    word-spacing: -0.5px;
+    word-spacing: 5.5px;
 }
 
 .bubble-title {
-    word-spacing: -1px;
     margin: -5px 0px 0px 14px;
 }
 
@@ -448,7 +460,7 @@ img[alt="phone-image"] {
 /* singolo2 */
 
 .portfolio {
-    scroll-margin-top: 95px;
+    scroll-margin-top: 90px;
     height: 863px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
@@ -487,15 +499,15 @@ img[alt="phone-image"] {
     font-family: Lato-Light;
     padding-top: 27px;
     font-weight: 300;
-    letter-spacing: -0.2067px;
-    word-spacing: -0.07px;
+    letter-spacing: -0.1767px;
+    word-spacing: 1px;
 }
 
 .portfolio__navigation {
     padding: 0px 0px 0px 0px;
     margin-block-start: 0em;
     margin-block-end: 0em;
-    margin: 11px 0px 0px 2px;
+    margin: 11px 0px 0px 0px;
     width: 100%;
 }
 
@@ -510,7 +522,7 @@ img[alt="phone-image"] {
     border-radius: 5px;
     font-weight: 400;
     padding: 0px 6px;
-    margin-left: 6px;
+    margin-left: 7px;
     text-align: center;
     transition: border-color 1s, color 0.3s;
     cursor: pointer;
@@ -524,10 +536,6 @@ img[alt="phone-image"] {
     color: white;
     border-color: white;
     transition: border-color 1s, color 0.3s;;
-}
-
-.navigation__link:last-child {
-    margin-left: 5px;
 }
 
 .container-flex {
@@ -550,7 +558,7 @@ img[alt="phone-image"] {
 }
 
 .AboutUs {
-    scroll-margin-top: 95px;
+    scroll-margin-top: 90px;
     height: 728px; 
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;
@@ -567,6 +575,7 @@ img[alt="phone-image"] {
 
 .AboutUs h3 span {
     word-spacing: -0.15px;
+    letter-spacing: 0.02px;
 }
 
 .about-flex {
@@ -697,7 +706,7 @@ img[alt="phone-image"] {
 /* singolo3 */
 
 .get-a-quote {
-    scroll-margin-top: 95px;
+    scroll-margin-top: 90px;
     padding: 0px 0px 0px 0px;
     height: 648px;
     width: 100%;
@@ -725,11 +734,10 @@ img[alt="phone-image"] {
     color: #f0d8d9;
     font-family: Lato-Light;
     font-weight: 300;
-    letter-spacing: -0.05px;
 }
 
 .quote__description span {
-    word-spacing: -1.1px;
+    word-spacing: -0.1px;
 }
 
 .container-form {
@@ -740,12 +748,12 @@ textarea {
     padding: 0px;
     resize: none;
     width: 97.5767366720517%;
-    height: 195.57px;
+    height: 152.57px;
     border-radius: 5px;
     background-color: #d6564f;
     border: none;
     outline: none;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     padding-left: 15px;
     padding-top: 6.5px;
     font-size: 12px;
@@ -841,6 +849,7 @@ textarea::placeholder {
     margin-top: -8px;
     letter-spacing: -0.2px;
     word-spacing: 1.1px;
+    text-align: justify;
 }
 
 .contact-info__description span {
@@ -874,7 +883,7 @@ textarea::placeholder {
 }
 
 .adress div {
-    margin-bottom: 0px;
+    margin-bottom: 1px;
     display: inline-flex;
     width: 100%;
     align-items: center;
@@ -890,7 +899,6 @@ textarea::placeholder {
     text-decoration: none;
     padding: 0px 0px 0px 13px;
     vertical-align: center;
-    letter-spacing: -0.17px;
 }
 
 .adress .div-telephone {
@@ -916,8 +924,8 @@ footer {
 }
 
 .footer__copyright-text {
-    padding: 27px 0px 0px 42px;
-    font-size: 12px;
+    padding: 28px 0px 0px 42.5px;
+    font-size: 13px;
     line-height: 22px;
     color: #666d89;
     font-family: Lato-Regular;
@@ -928,7 +936,7 @@ footer {
 .footer-flex {
     display: flex;
     float: right;
-    padding: 22px 32px 0px 0px;
+    padding: 22px 33px 0px 0px;
 }
 
 .footer-flex span {
@@ -1021,12 +1029,19 @@ footer {
 
 /*                                             MEDIA STYLES */
 
-@media only screen and (min-width: 1020px) {
+/* @media only screen and (min-width: 1020px) {
     
     .navigation__link:hover {
     border-color: white;
     color: white;
     }
+} */
+
+@media (hover:hover) {
+    .navigation__link:hover {
+        border-color: white;
+        color: white;
+        }
 }
 /* 768px <= width < 1020px */
 
@@ -1205,14 +1220,17 @@ footer {
     }
 
     .form input {
-        width: calc(57.5208333333333vw - 15px);
+        width: calc(57.5208333333333vw - 8px);
+        padding-left: 8px;
         margin-bottom: 13px;
     }
 
     .form textarea {
-        width: calc(57.5208333333333vw - 15px);
-        height: 149.57px;
+        width: calc(57.5208333333333vw - 9px);
+        height: 151.57px;
         margin-bottom: 15px;
+        padding-left: 9px;
+        padding-top: 3.5px;
     }
 
     .contact-info {
@@ -1530,11 +1548,11 @@ footer {
     }
 
     .form input {
-        width: calc(84vw - 15px);
+        width: calc(84vw - 8px);
     }
 
     .form textarea {
-        width: calc(84vw - 15px);
+        width: calc(84vw - 9px);
         margin-bottom: 10px;
     }
 
